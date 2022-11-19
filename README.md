@@ -68,6 +68,31 @@ The Project is broken down into the following file structure:
 
 ## ATP
 
+Step     Procedure                                Expected Results                                   
+1        Run Controller()                         1) Main Menu opens normally and is functional
+                        
+2        Click “Instructions” button              1) Instructions Page opens and is functional
+                                                  2) sound effect plays when button is pressed
+
+
+
+
+3        Click “Main Menu” button                 1) Main Menu opens again as normal and is                                                               functional                            
+                                                  2) sound effect plays when button is pressed
+
+
+
+
+4       Click “Play” button                       1) Game screen opens
+5       Press UP BUTTON                           1) Snake moves up
+6       Press DOWN BUTTON                         1) Snake moves down
+7       Press LEFT BUTTON                         1) Snake moves left
+8       Press RIGHT BUTTON                        1) Snake moves right
+9       Apple touched                             1) Apple count goes up one
+10      Wall hit                                  1) Game ends
+
+
+
 | Step                 |Procedure             |Expected Results                   |
 |----------------------|:--------------------:|----------------------------------:|
 |  1                   | Run Counter Program  |GUI window appears with count = 0  |

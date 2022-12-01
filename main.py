@@ -14,12 +14,7 @@ import sys
 pygame.init()
 dis = pygame.display.set_mode((400, 300))
 pygame.display.set_caption('Snake Game')
-game_over=False
-while not game_over:
-    for event in pygame.event.get():
-        print(event)
-
-      #Create Screen
+#Create Screen
 surface = pygame.display.set_mode((400, 300))
 color = (95, 158, 160, 255)
 surface.fill(color)
@@ -27,6 +22,9 @@ pygame.display.flip()
 
 frame_size_x = 720
 frame_size_y = 480
+
+font_style = pygame.font.SysFont("Arial", 25)
+score_font = pygame.font.SysFont("Arial", 35)
 
 #Allow player to choose color of snake
 red: (255, 0, 0)
@@ -73,13 +71,15 @@ quit()
 
 #Buttons for Snake to move around
 class Snake:
+
     def __init__(self):
         pass
 #Snake movement
+
     def move(self, direction):
         if direction == 'UP':
-            snake_pos_y[1]= -10
-            snake_pos_x= 0
+            snake_pos_y: -10
+            snake_pos_x: 0
         if direction == 'DOWN':
             snake_pos_y: 10
             snake_pos_x: 0
@@ -89,7 +89,7 @@ class Snake:
         if direction == 'LEFT':
             snake_pos_y: 0
             snake_pos_x: -10
-        pygame.display.update()
+
     def change_color(self, color_snake):
         if color_snake == "red":
           snake.color = "red"
@@ -103,8 +103,6 @@ class Snake:
           snake.color = "white"
         pygame.display.update()
 
-
-#shape of food
     def change_shape(self, shape_food):
       if shape_food == "square":
         food.shape = "square"
@@ -113,12 +111,15 @@ class Snake:
       else:
         shape_food == "triangle"
         food.shape = "triangle"
-      pygame.display.update()  
-
-
+      pygame.display.update()
+    
+          
 #Scoreboard
+    def Your_score(score):
+      value = score_font.render("Your Score: " + str(score), True, "yellow")
+      dis.blit(value, [0, 0])
 
 #Snake eats food + grows bigger  
 
 
-#Snake hits tail or wall and gameover 
+#Snake hits tail or wall and gameover

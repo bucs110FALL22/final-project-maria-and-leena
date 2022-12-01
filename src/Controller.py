@@ -1,5 +1,4 @@
 import src.snake
-
 class Controller:
   
   def __init__(self):

@@ -1,3 +1,10 @@
+#Call your mainloop
+
+###### NOTHING ELSE SHOULD GO IN main(), JUST THE ABOVE 3 LINES OF CODE ######
+
+# https://codefather.tech/blog/if-name-main-python/
+
+
 import pygame
 import random
 import time
@@ -22,7 +29,19 @@ yellow: (255, 255, 0)
 blue: (0, 0, 255)
 green: (0, 128, 0)
 
-color_snake = "Please input the color you would like your snake to be (red, yellow, blue green): "
+color_snake = input("Please input the color you would like your snake to be (red, yellow, blue green): ")
+
+#Allow player to choose shape of food
+food_pos= [
+    random.randrange(1, (frame_size_x // 5)) * 5,
+    random.randrange(1, (frame_size_y // 5)) * 5
+    ]
+food_spawn = True
+
+square: pygame.draw.rect(dis, "red", [200, 150, 10, 10])
+circle: pygame.draw.circle(dis, "red", food_pos, 10)
+
+shape_food = input("Please input the shape you would like your food to be (square or circle: ")
 
 #Create Snake
 snake = False
@@ -31,34 +50,24 @@ while not snake:
         if event.type == pygame.QUIT:
             snake = True
     pygame.draw.rect(dis, color_snake, [200, 150, 10, 10])
-    if color_snake == "red":
-        snake.color = "red"
-    elif color_snake == "green":
-        snake.color = "green"
-    elif color_snake == "blue":
-        snake.color = "blue"
-    elif color_snake == "yellow":
-        snake.color = "yellow"
     pygame.display.update()
 pygame.quit()
 quit()
 
-#Call your mainloop
+#Food
 
-###### NOTHING ELSE SHOULD GO IN main(), JUST THE ABOVE 3 LINES OF CODE ######
-
-# https://codefather.tech/blog/if-name-main-python/
-
-#Food (Random Coord)
-food_pos = [
-    random.randrange(1, (frame_size_x // 10)) * 10,
-    random.randrange(1, (frame_size_y // 10)) * 10
-]
-food_spawn = True
-
+food = False
+while not food:
+    for event in pygame.event.get():
+      if event.type == pygame.QUIT:
+        food= True
+    pygame.draw.shape_food(dis,"red", food_pos)
+    pygame.display.update()
+pygame.quit()
+quit()
 
 #Buttons for Snake to move around
-class Snake_movement:
+class Snake:
 
     def __init__(self):
         pass
@@ -80,15 +89,26 @@ class Snake_movement:
 
     def change_color(self, color_snake):
         if color_snake == "red":
-            snake.color = "red"
+          snake.color = "red"
         elif color_snake == "green":
-            snake.color = "green"
+          snake.color = "green"
         elif color_snake == "blue":
-            snake.color = "blue"
+          snake.color = "blue"
         elif color_snake == "yellow":
-            snake.color = "yellow"
+          snake.color = "yellow"
         else:
-            snake.color = "white"
+          snake.color = "white"
+        pygame.display.update()
 
-
+    def change_shape(self, shape_food):
+      if shape_food == "square":
+        food.shape = "square"
+      elif shape_food == "circle":
+        food.shape = "circle"
+      else:
+        shape_food == "triangle"
+        food.shape = "triangle"
+      pygame.display.update()
+    
+          
 #Scoreboard

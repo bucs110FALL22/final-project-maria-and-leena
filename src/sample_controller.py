@@ -39,7 +39,7 @@ class Controller:
             self.snake.change_color(color)
 
       #update data
-
+      pygame.display.update()
       #redraw
     
   def gameoverloop(self):

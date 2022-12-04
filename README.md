@@ -23,11 +23,11 @@ We modeled the snake game on google, we wanted the user to be able to choose the
 ## User Interface Design
 
 - **Initial Concept**
-  - << A wireframe or drawing of the user interface concept along with a short description of the interface. You should have one for each screen in your program. For example, if your program has a start screen, game screen, and game over screen, you should include a wireframe / screenshot / drawing of each one and a short description of the components. >>
-    
+
+The user types in the color they want their snake to be, the snake changes to the color of the users choice (if user chooses green, snake becomes green). The user types in the shape they want their fruit to be, the fruit changes to the shape of the users choice (if user chooses circle, food becomes circle).
+![69179841280__95F7B5B1-AF62-4D37-8E73-7EE28FC269C5](69179841280__95F7B5B1-AF62-4D37-8E73-7EE28FC269C5_3.heic)
     
 - **Final GUI**
-  - << You should also have a screenshot of each screen for your final GUI >>
 ![image](image_2.png)
 
 ***        
@@ -89,22 +89,14 @@ Leena→ created scoreboard, keys for snake movement, game over, organized into 
 
 ## ATP
 
-Step     Procedure                                Expected Results                                 
-1       Press UP BUTTON                           1) Snake moves up
-2      Press DOWN BUTTON                         2) Snake moves down
-3      Press LEFT BUTTON                         3) Snake moves left
-4       Press RIGHT BUTTON                        4) Snake moves right
-5       Apple touched                             5) Apple count goes up one
-6      Wall hit                                  6) Game ends
-
-
-
 | Step                 |Procedure             |Expected Results                   |
 |----------------------|:--------------------:|----------------------------------:|
 |  1                   | Press UP Button      |Snake moves up on the screeen      |
 |  2                     Press DOWN Button     Snake moves down on the screen 
-| 3                      Press RIGHT Button    Snake moves right on the screen 
-  4                      Press LEFT Button     Snake moves left on the screen 
-..5                     Eating apple results in   Player recieves 1 point for each apple eaten
+|  3                      Press RIGHT Button    Snake moves right on the screen 
+|  4                      Press LEFT Button     Snake moves left on the screen 
+|  5                    Eating apple results in Player recieves 1 point for each apple eaten
                           a change of score   
-  6                Allow snake to collide with wall       "Gameover" displays on screen 
+|  6                Allow snake to collide with wall       "Gameover" displays on screen 
+|  7                      User input            Snake changes color on the screen
+| 8                       User input            Food changes shape on the screen

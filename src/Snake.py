@@ -20,7 +20,7 @@ class Snake:        #controller
           self.gameloop()
         elif(self.state == "Gameover"):
           self.gameover()
-mainloop()  
+    mainloop()
   
   ### below are some sample loop states ###
 
@@ -97,12 +97,12 @@ def gameloop(self):
               color = self.getcolorfromuser()
               self.snake.change_color(color)
           pygame.font.SysFont("Arial", 65)
-  if snake_pos[0] < 0 or snake_pos > window_x-10: 
-    gameloop()
-  self.state = "Gameover"
-  if snake_pos[1] < 0 or snake_pos[1] > window_y-10:
-    gameloop()
-  self.state = "Gameover"
+          if snake_pos[0] < 0 or snake_pos > window_x-10:
+            gameloop()
+            self.state = "Gameover"
+          if snake_pos[1] < 0 or snake_pos[1] > window_y-10:
+            gameloop()
+            self.state = "Gameover"
 
 
 def move(self, direction):
@@ -155,7 +155,7 @@ if snake_pos[0] == food_pos[0] and snake_pos[0] == food_pos[1]:
 else: 
     snake_bod.pop()
 if not fruit_spawn:
-  fruit_pos= [random.randrange(1 (window_x//10))*10, random.randrange (1, (window_y//10))*10]
+  fruit_pos= [random.randrange(1,(window_x//10))*10, random.randrange (1, (window_y//10))*10]
   fruit_spawn= True
   surf= pygame.surface.fill("black")
 for pos in snake_bod:

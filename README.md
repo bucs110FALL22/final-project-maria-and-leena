@@ -1,22 +1,22 @@
 :warning: Everything between << >> needs to be replaced (remove << >> after replacing)
 # CS110 Project Proposal
-# << Project Title >>
+# Snake Game
 ## CS 110 Final Project
-### << Fall ,2022 >>
+### Fall ,2022 
 ### [Assignment Description](https://docs.google.com/document/d/1H4R6yLL7som1lglyXWZ04RvTp_RvRFCCBn6sqv-82ps/edit?usp=sharing)
 
-<< [repl](#) >>
+(https://replit.com/join/molgksuibk-mariaantonacci1)
 
-<< [link to demo presentation slides](#) >>
+(https://docs.google.com/presentation/d/1sfh-ZjcR-IjHj710h1KKkc-YtKiUlcEDcDzp0fWdBMw/edit?usp=sharing)
 
-### Team: << team name >>
-#### << Maria and Leena >>
+### Team: Snake
+#### Maria Antonacci and Leena Ouafik
 
 ***
 
 ## Project Description
 
-<< Give an overview of your project >>
+We modeled the snake game on google, we wanted the user to be able to choose the color of their snake and the shape of the fruit. We also wanted the user to use the arrow keys to move the snake around the screen to eat the fruit and gain points.
 
 ***    
 
@@ -28,6 +28,7 @@
     
 - **Final GUI**
   - << You should also have a screenshot of each screen for your final GUI >>
+![image](image_2.png)
 
 ***        
 
@@ -39,62 +40,71 @@
          - url for the module documentation
          - a short description of the module >>
 * Class Interface Design
-    * << A simple drawing that shows the class relationships in your code (see below for an example). This does not need to be overly detailed, but should show how your code fits into the Model/View/Controller paradigm. >>
+    * ![IMG-6681](IMG-6681.jpg)
         * ![class diagram](assets/class_diagram.jpg) 
 * Classes
-    * << You should have a list of each of your classes with a description. >>
-
+class Snake
+Attributes:
+  --> Surface
+  --> Color
+  --> Screen
+  --> x, y
+  --> font_style
+  --> score_font 
+Operations:
+--> *- multiplicatipn
+---> /- division
+--> +=
+--> ==
+--> -=
+--> + - addiiton
+--> - (subtraction )
+Responsibilities:
+--> The Class Snake compiles all the code needed for the Snake Game 
+  
 ## Project Structure and File List
 
 The Project is broken down into the following file structure:
 
 * main.py
 * src
-    * << all of your python files should go here >>
+    * Snake.py 
 * assets
-    * << all of your media, i.e. images, font files, etc, should go here) >>
+    * N/A
 * etc
-    * << This is a catch all folder for things that are not part of your project, but you want to keep with your project >>
+    * N/A
 
 ***
 
 ## Tasks and Responsibilities 
 
-   * Outline the team member roles and who was responsible for each class/method, both individual and collaborative.
+* Maria→ created the screen, snake, food, and user input
+Leena→ created scoreboard, keys for snake movement, game over, organized into classes
+
 
 ## Testing
 
-* << Describe your testing strategy for your project. >>
+* We verified that our code works by running the code in the shell and each time we added code, we checked if the code ran correctly.
+
 
 ## ATP
 
-Step     Procedure                                Expected Results                                   
-1        Run Controller()                         1) Main Menu opens normally and is functional
-                        
-2        Click “Instructions” button              1) Instructions Page opens and is functional
-                                                  2) sound effect plays when button is pressed
-
-
-
-
-3        Click “Main Menu” button                 1) Main Menu opens again as normal and is                                                               functional                            
-                                                  2) sound effect plays when button is pressed
-
-
-
-
-4       Click “Play” button                       1) Game screen opens
-5       Press UP BUTTON                           1) Snake moves up
-6       Press DOWN BUTTON                         1) Snake moves down
-7       Press LEFT BUTTON                         1) Snake moves left
-8       Press RIGHT BUTTON                        1) Snake moves right
-9       Apple touched                             1) Apple count goes up one
-10      Wall hit                                  1) Game ends
+Step     Procedure                                Expected Results                                 
+1       Press UP BUTTON                           1) Snake moves up
+2      Press DOWN BUTTON                         2) Snake moves down
+3      Press LEFT BUTTON                         3) Snake moves left
+4       Press RIGHT BUTTON                        4) Snake moves right
+5       Apple touched                             5) Apple count goes up one
+6      Wall hit                                  6) Game ends
 
 
 
 | Step                 |Procedure             |Expected Results                   |
 |----------------------|:--------------------:|----------------------------------:|
-|  1                   | Run Counter Program  |GUI window appears with count = 0  |
-|  2                   | click count button   | display changes to count = 1      |
-etc...
+|  1                   | Press UP Button      |Snake moves up on the screeen      |
+|  2                     Press DOWN Button     Snake moves down on the screen 
+| 3                      Press RIGHT Button    Snake moves right on the screen 
+  4                      Press LEFT Button     Snake moves left on the screen 
+..5                     Eating apple results in   Player recieves 1 point for each apple eaten
+                          a change of score   
+  6                Allow snake to collide with wall       "Gameover" displays on screen 

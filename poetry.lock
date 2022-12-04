@@ -6,10 +6,19 @@ category = "main"
 optional = false
 python-versions = ">=3.6"
 
+[[package]]
+name = "snake"
+version = "0.2"
+description = "Snake is yet another Make-like tool inspired by Rake."
+category = "main"
+optional = false
+python-versions = "*"
+
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "ceabba9b684e4f2ab71d2d4da4968eba8c229599e1fa639f3b9b53711f3f4243"
+content-hash = "436f4299c2bbb4ecff5b3a3388bb9f68596fd5029cbabfeb96ebe807a61ccbae"
 
 [metadata.files]
 pygame = []
+snake = []
